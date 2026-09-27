@@ -1,0 +1,13 @@
+store_id,city,region,store_type,floor_area
+S001,Mumbai,West,Small,7226
+S002,Pune,West,Small,6401
+S003,Delhi,North,Medium,9570
+S004,Bengaluru,South,Medium,7301
+S005,Chennai,South,Medium,11131
+S006,Kolkata,East,Small,9480
+S007,Mumbai,West,Small,11276
+S008,Pune,West,Medium,13845
+S009,Delhi,North,Medium,15530
+S010,Bengaluru,South,Large,10140
+S011,Chennai,South,Medium,13237
+S012,Kolkata,East,Medium,17124

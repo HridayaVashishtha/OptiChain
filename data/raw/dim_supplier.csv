@@ -1,0 +1,9 @@
+supplier_id,supplier_name,category,base_lead_time_days,defect_rate_base
+SUP01,Supplier A,Electronics,8,0.0204
+SUP02,Supplier B,Electronics,7,0.0083
+SUP03,Supplier C,Apparel,8,0.0325
+SUP04,Supplier D,Home,5,0.018
+SUP05,Supplier E,Apparel,7,0.0338
+SUP06,Supplier F,Grocery,3,0.0244
+SUP07,Supplier G,Home,8,0.0271
+SUP08,Supplier H,Apparel,4,0.039
