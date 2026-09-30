@@ -162,7 +162,7 @@ The output is [`reports/decision_recommendations.csv`](reports/decision_recommen
 
 ## Power BI Dashboard
 
-The repository contains five dashboard screenshots in `powerbi/`. The screenshots are listed in capture order; the page descriptions below follow the supplied project page sequence.
+The repository contains five dashboard screenshots in `dashboard/`. The screenshots are listed in capture order; the page descriptions below follow the supplied project page sequence.
 
 ### Executive Dashboard
 
@@ -170,7 +170,7 @@ Purpose: review top-level revenue, profit, inventory, and store/category perform
 
 Visuals: KPI cards and comparative revenue/profit views.
 
-![Executive Dashboard](powerbi/Screenshot%202026-09-30%20214005.png)
+![Executive Dashboard](dashboard/Screenshot%202026-09-30%20214005.png)
 
 ### Demand Analytics
 
@@ -178,7 +178,7 @@ Purpose: inspect demand patterns and compare historical demand with model foreca
 
 Visuals: demand trends and forecast-related views.
 
-![Demand Analytics](powerbi/Screenshot%202026-09-30%20214021.png)
+![Demand Analytics](dashboard/Screenshot%202026-09-30%20214021.png)
 
 ### Promotion Analytics
 
@@ -186,7 +186,7 @@ Purpose: assess promotion performance alongside sales, profit, discount, and mar
 
 Visuals: promotion-level and discount-related comparisons.
 
-![Promotion Analytics](powerbi/Screenshot%202026-09-30%20214043.png)
+![Promotion Analytics](dashboard/Screenshot%202026-09-30%20214043.png)
 
 ### Inventory Control Tower
 
@@ -194,7 +194,7 @@ Purpose: surface inventory availability, stockout and overstock risk, and replen
 
 Visuals: inventory and stockout indicators with store/product breakdowns.
 
-![Inventory Control Tower](powerbi/Screenshot%202026-09-30%20214055.png)
+![Inventory Control Tower](dashboard/Screenshot%202026-09-30%20214055.png)
 
 ### Supplier Analytics
 
@@ -202,13 +202,13 @@ Purpose: compare supplier cost and fulfillment trade-offs without hiding the und
 
 Visuals: Supplier Cost vs Reliability, Lead-Time Variability, Supplier Reliability, Supplier Product Coverage by Category, and KPI cards.
 
-![Supplier Analytics](powerbi/Screenshot%202026-09-30%20214116.png)
+![Supplier Analytics](dashboard/Screenshot%202026-09-30%20214116.png)
 
 ## Power BI File
 
-The `.pbix` file is not present in this repository and may be shared separately:
+The `.pbix` file is available separately:
 
-[Download the Power BI .pbix file](INSERT_LINK_HERE)
+[Download the Power BI .pbix file](https://drive.google.com/file/d/15Y59yZQjjgCr5eqjzngk5EVBEKJhLRn2/view?usp=sharing)
 
 The screenshots above are included for a quick review without the Power BI file.
 
@@ -222,7 +222,7 @@ The monthly revenue and profit figures are simple 30-day projections based on th
 streamlit run app/streamlit_app.py
 ```
 
-[Add a Streamlit screenshot here; no app screenshot file is present in the repository.]
+![OptiChain Streamlit What-If Simulator](app/Screenshot%202026-09-30%20220531.png)
 
 ## Key Results
 
@@ -242,73 +242,16 @@ All results above are measured from repository artifacts or saved notebook outpu
 
 ```text
 OptiChain/
-├── app/
-│   └── streamlit_app.py
-├── dashboard/                         # currently empty
-├── data/
-│   ├── processed/
-│   │   ├── demand_forecast_predictions.csv
-│   │   ├── fact_sales_clean.csv
-│   │   ├── inventory_recommendations.csv
-│   │   └── order_recommendations.csv
-│   └── raw/
-│       ├── dim_date.csv
-│       ├── dim_product.csv
-│       ├── dim_store.csv
-│       ├── dim_supplier.csv
-│       ├── fact_inventory.csv
-│       ├── fact_orders.csv
-│       ├── fact_promotions.csv
-│       ├── fact_sales.csv
-│       ├── fact_sales_dirty.csv
-│       └── fact_supplier_deliveries.csv
-├── excel/
-│   └── OptiChain_Analysis.xlsx
-├── models/
-│   └── demand_forecast_xgb.json
-├── notebooks/
-│   ├── 01_data_quality.ipynb
-│   ├── 02_eda.ipynb
-│   ├── 04_demand_forecasting.ipynb
-│   ├── 05_inventory_optimization.ipynb
-│   └── 06_supplier_analytics.ipynb
-├── powerbi/
-│   ├── Screenshot 2026-09-30 214005.png
-│   ├── Screenshot 2026-09-30 214021.png
-│   ├── Screenshot 2026-09-30 214043.png
-│   ├── Screenshot 2026-09-30 214055.png
-│   └── Screenshot 2026-09-30 214116.png
-├── reports/
-│   ├── business_requirements.md
-│   ├── decision_recommendations.csv
-│   ├── Q1_high_revenue_low_profit.csv
-│   ├── Q2_store_stockout_rates.csv
-│   ├── Q3_overstocked_products.csv
-│   ├── Q4_category_growth.csv
-│   ├── Q5_promotion_profit_roi.csv
-│   ├── Q6_supplier_delivery_performance.csv
-│   ├── Q7_rising_demand_shrinking_inventory.csv
-│   └── Q8_high_inventory_low_sales_stores.csv
-├── sql/
-│   ├── inventory_analysis.sql
-│   ├── load_data.sql
-│   ├── promotion_analysis.sql
-│   ├── sales_analysis.sql
-│   ├── schema.sql
-│   └── supplier_analysis.sql
-├── src/
-│   ├── data_processing/               # currently empty
-│   ├── forecasting/                   # currently empty
-│   ├── optimization/                  # currently empty
-│   ├── promotion/                     # currently empty
-│   ├── recommendations/
-│   │   └── decision_engine.py
-│   ├── data_quality_check.py
-│   ├── generate_data.py
-│   ├── inject_dirty_data.py
-│   └── sanity_check.py
-├── requirements.txt
-└── .gitignore
+├── app/              # Streamlit simulator and its screenshot
+├── dashboard/        # Power BI page screenshots and visuals
+├── data/             # Raw synthetic data and processed outputs
+├── excel/            # Analysis and what-if workbook
+├── models/           # Saved demand-forecast model
+├── notebooks/        # Data quality, EDA, forecasting, optimization, supplier analysis
+├── reports/          # SQL result exports and decision recommendations
+├── sql/              # PostgreSQL schema, loading, and analysis queries
+├── src/              # Data generation, quality checks, and recommendation logic
+└── requirements.txt  # Python dependencies
 ```
 
 ## Setup & Installation
@@ -389,36 +332,4 @@ The generator seeds NumPy's random generator, but also uses Python's built-in `h
 
 ## Limitations & Assumptions
 
-- All transaction, inventory, promotion, order, and supplier records are synthetic; simulated relationships do not establish real retailer behavior.
-- The demand generator encodes assumed relationships for seasonality, promotions, store factors, and supplier reliability. The Streamlit scenario uses a fixed elasticity assumption of 1.5.
-- Forecast metrics are measured on a held-out period from the generated dataset and should not be generalized to live retail data.
-- Safety stock, reorder points, and EOQ depend on assumed service level, lead time, ordering cost, and holding cost. The optimization further depends on the chosen objective, per-SKU quantity bounds, budget, and capacity.
-- SQL promotion ROI uses promotion-period profit and marketing cost; it is not a causal lift estimate.
-- Streamlit outputs are scenario calculations for decision support, not guaranteed revenue, profit, or service-level outcomes.
-
-## Future Enhancements
-
-- Validate against real transactional and supplier data, with ERP integration and scheduled refresh.
-- Add probabilistic forecasting and automated model retraining.
-- Estimate promotion elasticity using stronger controls and quantify uncertainty.
-- Compare scenarios across multiple products and stores, and add deployment and monitoring workflows.
-
-## Skills Demonstrated
-
-| Area | Skills evidenced in the repository |
-|---|---|
-| Data analysis | Python, pandas, NumPy, descriptive analysis, statistical testing |
-| SQL | PostgreSQL schema, joins, aggregations, conditional logic, subqueries, CTEs, views |
-| Excel | XLOOKUP, AVERAGEIFS, SUMIFS, scenario inputs, inventory formulas |
-| Machine learning | XGBoost, lag/rolling feature engineering, time-based holdout evaluation |
-| Optimization | Safety stock, reorder point, EOQ, PuLP, budget and capacity constraints |
-| Visualization | Power BI dashboard screenshots, matplotlib, seaborn |
-| Application | Streamlit scenario simulator |
-| Engineering | Modular Python scripts, notebooks, reproducible data workflow |
-
-## Author / Contact
-
-Author: [Your Name]  
-LinkedIn: [LinkedIn URL]  
-GitHub: [GitHub URL]  
-Email: [Email]
+The dataset is synthetic, and its demand, promotion, and supplier relationships are simulated. Forecast results apply only to the generated holdout data. Inventory recommendations depend on assumed elasticity, service level, lead time, ordering and holding costs, budget, and capacity. Promotion ROI is not a causal lift estimate, and Streamlit projections are scenarios rather than guaranteed outcomes.
